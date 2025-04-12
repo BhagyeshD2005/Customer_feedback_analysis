@@ -1,3 +1,5 @@
+
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -28,13 +30,73 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
 
-df = pd.read_csv('feedback.csv')
-
-# Convert to dictionary (if needed)
 data = {
-    'feedback': df['feedback'].tolist(),
-    'sentiment': df['sentiment'].tolist()
+    'feedback': [
+        "The product is amazing! I love it so much.",
+        "Not satisfied with the quality, will not buy again.",
+        "I had a great experience with customer service.",
+        "Delivery was delayed and the product was damaged.",
+        "Average product, nothing special about it.",
+        "This is the best purchase I've made all year!",
+        "Terrible experience, waste of money.",
+        "The product meets my expectations.",
+        "I'm disappointed with the features.",
+        "Customer support was helpful and responsive.",
+        "The app keeps crashing, very frustrating.",
+        "Decent value for money, would recommend.",
+        "Excellent quality and fast shipping!",
+        "Too expensive for what it offers.",
+        "Product works as advertised, no complaints.",
+        "I regret buying this product.",
+        "Absolutely love it! Will buy again.",
+        "The website was confusing to navigate.",
+        "Good product but shipping took too long.",
+        "Not worth the price, look elsewhere.",
+        "Packaging was beautiful and eco-friendly.",
+        "Nothing extraordinary, just okay.",
+        "Best customer service I've ever had!",
+        "App interface is clean and easy to use.",
+        "Refund process was a nightmare.",
+        "Everything arrived on time and in perfect condition.",
+        "Felt scammed, not what I expected at all.",
+        "The design looks outdated.",
+        "Happy with the product, does the job.",
+        "Too many ads in the app, annoying.",
+        "Product exceeded my expectations!",
+        "Just average, wouldn’t recommend strongly.",
+        "Broken item received, very disappointed.",
+        "I’ve already recommended it to my friends!",
+        "Slow loading time makes it unusable.",
+        "Affordable and good build quality.",
+        "Did not match the description.",
+        "I’m really impressed by the performance.",
+        "Installation instructions were confusing.",
+        "Fair price, decent quality.",
+        "Unhelpful and rude customer support.",
+        "Loving the updates and new features!",
+        "Not intuitive for new users.",
+        "Sleek design and very durable.",
+        "Service team resolved my issue quickly.",
+        "Expected better for the price.",
+        "Easy checkout process, hassle-free shopping.",
+        "The color faded after one wash.",
+        "Perfect gift, they absolutely loved it!",
+        "Felt like a waste of my time and money."
+    ],
+    'sentiment': [
+        'positive', 'negative', 'positive', 'negative', 'neutral',
+        'positive', 'negative', 'neutral', 'negative', 'positive',
+        'negative', 'positive', 'positive', 'negative', 'neutral',
+        'negative', 'positive', 'negative', 'neutral', 'negative',
+        'positive', 'neutral', 'positive', 'positive', 'negative',
+        'positive', 'negative', 'neutral', 'positive', 'negative',
+        'positive', 'neutral', 'negative', 'positive', 'negative',
+        'positive', 'negative', 'positive', 'negative', 'neutral',
+        'negative', 'positive', 'negative', 'positive', 'positive',
+        'negative', 'positive', 'negative', 'positive', 'negative'
+    ]
 }
+
 
 df = pd.DataFrame(data)
 
