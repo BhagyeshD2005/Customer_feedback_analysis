@@ -1,2 +1,1 @@
-# 1projectai
-prototype ai project
+# Sentimental Data Analysis Model- Customer Feedback Analysis
